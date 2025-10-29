@@ -21,6 +21,7 @@ template <typename T> class linkedlist{
 			if(temp->data==element){
 				return true;
 			}
+			temp = temp->next;
 		}
 		return false;
 	  }

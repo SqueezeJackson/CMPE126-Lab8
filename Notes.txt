@@ -1,0 +1,13 @@
+           // for(int i = 0; i<size-1;i++){
+                //     if(arr[i]>elem&&!found){
+                //         temp[j++] = elem;
+                //         // cout<<"Inserting "<<elem<< "into arr now"<<endl;
+                //         found = true;
+                //     }
+                //     else{
+                //         temp[j++] = arr[i];
+                //     }
+                // }
+                // if(found == false){
+                //     temp[j] = elem;
+                // }
