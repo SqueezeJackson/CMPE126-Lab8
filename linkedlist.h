@@ -15,6 +15,30 @@ template <typename T> class linkedlist{
 		size = 0;
 		head = nullptr; //head also init ot nullptr
 	  }
+	  bool seqSearchIter (T element){
+		Node* temp = head;
+		while(temp!=nullptr){
+			if(temp->data==element){
+				return true;
+			}
+		}
+		return false;
+	  }
+
+	  bool seqSearchRec (T element){
+		Node* temp = head;
+		return recSearchHelper(temp, element);
+	  }
+
+	  bool recSearchHelper(Node* temp, T element){
+		if(temp==nullptr){
+			return false;
+		}
+		if(temp -> data == element){
+			return true;
+		}
+		return recSearchHelper(temp->next, element);
+	  }
 	  bool isEmpty(){
 		if(size == 0){
 			return true; //These were kinda weird since linked list isnt really full or empty
