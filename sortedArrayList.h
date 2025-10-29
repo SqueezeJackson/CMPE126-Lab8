@@ -53,8 +53,31 @@ template <typename T> class sortedArrList{
                 delete[] arr;
                 arr = temp;
                 return true;
-
             }
+            return false;
+        }
+        void remove(T elem){
+            if(size == 0){
+                return;
+            }
+            bool contains = false;
+            for(auto x: arr){
+                if (x==elem){
+                    contains = true;
+                    break
+                }
+            }
+            if(contains){
+            int j = 0;
+            T* temp = new T[size-1];
+            for(int i = 0; i<size; i++){
+                if(arr[i]!=elem){
+                    temp[j++] = arr[i];
+                    }
+                }
+                return;
+            }
+            return;
         }
 
         ~sortedArrayList(){
