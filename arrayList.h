@@ -10,6 +10,24 @@ template <typename T> class arrayList{
             size = 0;
             list = new T[size];
         }
+        int seqSearchIter (T element){
+            for(unsigned int i = 0; i<size; i++){
+                if(list[i]==element){
+                    return i;
+                }
+            }
+            throw "itemNotFound";
+        }
+        int seqSearchRec(T element, unsigned int idx = 0){
+            if(idx>=size){
+                throw "itemNotFound";
+                return 0;
+            }
+            if(list[idx]!=element){
+                return seqSearchRec(element, idx+1);
+            }
+            return idx;
+        }
         bool isEmpty(){ //checks if size is = 0
             if(size==0){
                 return true;
