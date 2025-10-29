@@ -59,7 +59,7 @@ case 2:
      cout << "Enter elem to search in an array list w/ recursion: "<<endl;
     // int elem;
     cin>>elem;
-    cout<<arrL.seqSearchRec(elem, 0);
+    cout<<arrL.seqSearchRec(elem);
     break;
 case 3:
     cout << "Enter elem to use binary search on in a sorted array list w/o recursion: "<<endl;
